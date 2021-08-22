@@ -8,6 +8,7 @@
   <title>WebClipBoard</title>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="script.js"></script>
@@ -50,6 +51,35 @@
 
       <!-- 파일 공유 -->
       <div class="tabPage">
+
+        <div class="field">
+          <label class="label">이름</label>
+          <div class="control">
+            <input type="text" class="input" placeholder="설정에서 이름을 변경해주세요">
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">파일</label>
+            <div class="file has-name is-fullwidth">
+              <label class="file-label">
+                <input class="file-input" type="file">
+                <span class="file-cta">
+                  <span class="file-icon">
+                    <i class="fas fa-upload"></i>
+                  </span>
+                  <span class="file-label">
+                    파일 선택
+                  </span>
+                </span>
+                <span class="file-name"></span>
+              </label>
+            </div>
+        </div>
+        <div class="field is-grouped is-grouped-right">
+          <div class="control">
+            <a class="button is-info">등록</a>
+          </div>
+        </div>
 
       </div>
 
