@@ -1,7 +1,7 @@
 $(document).ready(() => {
   const tabs = $('#mainTabs > ul > li').get()
   const tabPages = $('.tabPage').get()
-  let userName;
+  let userName
 
   // 탭 설정
   tabs.forEach((tab, idx) => {
@@ -10,7 +10,7 @@ $(document).ready(() => {
     });
   });
 
-  setTabMenu(3);
+  setTabMenu(0);
 
   function setTabMenu(idx) {
     tabs.forEach((tabToActive, activeIdx) => {
@@ -30,6 +30,25 @@ $(document).ready(() => {
     });
   };
 
+  // 텍스트 공유 탭
+  $('#textShareBtn').click(() => {
+    const text = $('#textShareInput').val()
+    console.log(text)
+  })
+
+  // 최근 기록 탭
+
+  // 파일 공유 탭
+  $('#fileShareInput').change(() => {
+    const fileName = $('#fileShareInput')[0].files[0].name
+    $('#fileShareFileName').text(fileName)
+  })
+
+  $('#fileShareBtn').click(() => {
+    // TODO upload file
+  })
+
+
   // 설정 탭
   setUserName($.cookie('name') || '')
   $('#nameSettingInput').val(userName)
@@ -39,8 +58,9 @@ $(document).ready(() => {
 
     if (name) {
       setUserName(name)
+      alert("이름이 설정되었습니다")
     }
-  });
+  })
 
   function setUserName(name) {
     userName = name
@@ -51,5 +71,5 @@ $(document).ready(() => {
   }
 
 
-});
+})
 

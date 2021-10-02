@@ -40,12 +40,12 @@
         <div class="field">
           <label class="label">내용</label>
           <div class="control">
-            <textarea class="textarea" placeholder="내용을 입력해주세요"></textarea>
+            <textarea id="textShareInput" class="textarea" placeholder="내용을 입력해주세요"></textarea>
           </div>
         </div>
         <div class="field is-grouped is-grouped-right">
           <div class="control">
-            <a class="button is-info">등록</a>
+            <a id="textShareBtn" class="button is-info">등록</a>
           </div>
         </div>
 
@@ -64,7 +64,7 @@
           <label class="label">파일</label>
             <div class="file has-name is-fullwidth">
               <label class="file-label">
-                <input class="file-input" type="file">
+                <input id="fileShareInput" class="file-input" type="file">
                 <span class="file-cta">
                   <span class="file-icon">
                     <i class="fas fa-upload"></i>
@@ -73,13 +73,13 @@
                     파일 선택
                   </span>
                 </span>
-                <span class="file-name"></span>
+                <span id="fileShareFileName" class="file-name"></span>
               </label>
             </div>
         </div>
         <div class="field is-grouped is-grouped-right">
           <div class="control">
-            <a class="button is-info">등록</a>
+            <a id="fileShareBtn" class="button is-info">등록</a>
           </div>
         </div>
 
